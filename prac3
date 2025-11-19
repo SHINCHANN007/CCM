@@ -1,0 +1,33 @@
+practical 3
+
+Uploading a File to AWS S3 and Generating a Pre-Signed URL 
+
+To create an Amazon S3 bucket, upload a file into it, and generate a pre-signed URL that can 
+be used to access the file securely. 
+
+Step 1: Log in to AWS Console 
+● Open AWS Management Console. 
+● Sign in with your AWS credentials. 
+● Navigate to Services → S3. 
+
+Step 2: Create an S3 Bucket 
+● Click Create bucket. 
+
+● Enter a unique bucket name (e.g., my-practical3-bucket). 
+● Choose a region (e.g., Asia Pacific (Mumbai)). 
+● Leave other settings as default (Block Public Access ON). 
+● Click Create bucket. 
+
+Step 3: Upload a File to the Bucket 
+● Open the bucket you created. 
+● Click Upload → Add files. 
+● Select the file 
+● Click Upload.
+
+Step 4: Generate a Pre-Signed URL 
+● Select the uploaded file (insperity.jpg). 
+● Click Actions → Share with a presigned URL. 
+● Choose expiry duration (e.g., 1 hour). 
+● AWS generates the URL and copies it to your clipboard. 
+
+After time limit is over is shows:
