@@ -1,0 +1,38 @@
+PRACTICAL-5 
+Hosting a Web Page on EC2 (Amazon Linux 2) 
+ 
+To set up an Apache web server on an Amazon EC2 instance running Amazon Linux 2, upload 
+an HTML page, and access it via the browser. 
+
+Step 1:Create Instance -> Give name , Select Amazon Linux 
+
+Step2:Go to security ->Security groups inbound 
+Click Edit inbound rules. 
+Add a new rule: 
+Type: HTTP 
+Port: 80 
+Source: Anywhere (0.0.0.0/0) → or restrict to your IP. 
+Click Save rules.
+
+for safe side add https and http anywhere
+
+Step3:Connect to Instance console
+
+1.  
+Write the commands to perform: 
+sudo yum update -y 
+sudo yum install httpd -y 
+sudo systemctl start httpd 
+sudo systemctl enable httpd 
+1.     Add Your HTML Page 
+a.    
+b.   
+Navigate to Apache’s web root: 
+●  cd /var/www/html 
+Create or edit index.html: 
+●  sudo nano index.html 
+
+ctrl+O -> Enter (to save) 
+Ctrl+x (to exit) 
+
+then oprn public ip on othe browers phone
