@@ -1,0 +1,24 @@
+PRACTICAL-4 
+Creating an IAM User in AWS Console with S3-only Permissions 
+
+To create a new IAM user in AWS Management Console and assign permissions so that the 
+user can only access Amazon S3 services. 
+1. Open AWS Management Console. 
+2. Log in with your root account or an IAM account that has admin privileges. 
+3. In the search bar at the top, type IAM. 
+4. Click on IAM (Identity and Access Management).
+
+1. In the IAM dashboard, click Users from the left sidebar. 
+2. Click Add users button. 
+3. Enter a username (e.g., s3-only-user). 
+4. Select Password - AWS Management Console access so the user can log in.
+
+○ You may also choose Access key - Programmatic access if you want them to use 
+CLI/SDK.
+
+Choose Attach policies directly. 
+1. Search for AmazonS3FullAccess or AmazonS3ReadOnlyAccess (depending on what you 
+want). 
+○ Select AmazonS3FullAccess if the user should be able to 
+upload/download/delete. 
+Click Next 
