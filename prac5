@@ -24,14 +24,64 @@ sudo yum update -y
 sudo yum install httpd -y 
 sudo systemctl start httpd 
 sudo systemctl enable httpd 
-1.     Add Your HTML Page 
-a.    
-b.   
+   
 Navigate to Apache’s web root: 
 ●  cd /var/www/html 
 Create or edit index.html: 
 ●  sudo nano index.html 
+1.     Add Your HTML Page 
+1.     Add Your HTML Page 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Toggle</title>
+    <style>
+        /* Base Styles (Light Mode) */
+        body {
+            font-family: sans-serif;
+            padding: 30px;
+            background-color: #fff;
+            color: #333;
+            transition: 0.5s;
+            text-align: center;
+        }
 
+        /* Dark Mode Activation using :target */
+        body:target {
+            background-color: #111;
+            color: #f0f0f0;
+        }
+        
+        /* Links and General Text */
+        a {
+            color: inherit; /* Links inherit body color */
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid currentColor; /* Uses the current text color */
+            border-radius: 3px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body id="light"> 
+
+    <h1>Minimal Design</h1>
+    
+    <p>
+        This page is simple, short, and uses almost no CSS. The unique feature is the **pure CSS dark mode toggle** below.
+    </p>
+
+    <div class="controls">
+        <a href="#dark">Dark Mode 🌑</a>
+        <a href="#light">Light Mode ☀️</a>
+    </div>
+    
+</body>
+</html>
 ctrl+O -> Enter (to save) 
 Ctrl+x (to exit) 
 
