@@ -29,3 +29,24 @@ npm run build
 firebase deploy
 
 open link in other browser or phone
+
+
+code:
+
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>My First React App</h1> {/* ADDED */}
+        <p>
+          Hello! I'm learning React development today.
+        </p>
+        <button>Click Me</button> {/* ADDED */}
+      </header>
+    </div>
+  );
+}
+export default App;
+
