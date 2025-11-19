@@ -1,0 +1,52 @@
+upload file 2 get link,update link to file 1,upload file1 , get link and open in browser
+
+
+file1.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File 1 - Presigned</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the First Presigned Page!</h1>
+    <p>Click the button below to securely jump to the second file.</p>
+    
+    <a id="next-page-button" class="button" href="[PRESIGNED_URL_OF_FILE_2]">Go to File 2</a>
+</body>
+</html>
+
+
+file2.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File 2 - Presigned</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f0f8ff; }
+        h1 { color: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>Success! This is the Second Secure Page.</h1>
+    <p>If you see this, the presigned URL for the link worked correctly.</p>
+</body>
+</html>
