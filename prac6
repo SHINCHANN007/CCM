@@ -1,0 +1,55 @@
+Practical No.06 
+Aim: Server Management 
+Step 1: Creating a simple calculator using html 
+Open VS Code. 
+● Create a new folder (e.g. calculator-lambda). 
+● Open that folder in VS Code (File → Open Folder) 
+Step 2: Create the files 
+Inside the folder, make two files: 
+1. index.html (this is your calculator frontend) 
+2. lambda_function.py 
+Code: 
+Step 3: Create zip file 
+Open VS Code terminal 
+zip -r function.zip index.html lambda_function.py 
+
+
+lambda_function.py
+import os
+
+def lambda_handler(event, context):
+    with open("index.html", "r") as file:
+        html_content = file.read()
+
+    return {
+        "statusCode": 200,
+        "headers": {
+            "Content-Type": "text/html",
+        },
+        "body": html_content
+    }
+
+
+zip -r test.zip index.html lambda_function.py
+
+
+
+Step 4: Upload to AWS Lambda 
+1. Go to AWS Console → Lambda → Create function. 
+2. Runtime: python.3.13 
+3. Execution role: new or existing (attach 
+AWSLambdaBasicExecutionRole). 
+4. Upload your function.zip in Code → Upload from → .zip file. 
+5. Save & Deploy. 
+
+
+Creating the function for the lambda function 
+
+Successfully created function after that uploading zip file   
+Uploading the zip file  
+
+
+Step 5: Add the trigger and do the required configuration retrieve & use the 
+Endpoint 
+Using API Gateway and security should be open. 
+Step 6: Access calculator app with endpoint
