@@ -1,0 +1,31 @@
+PRACTICAL-2 
+
+Deploying a React Application on Firebase Hosting
+
+To create a React application, build it for production, and deploy it on Firebase 
+Hosting so that it is accessible via a public URL. 
+
+
+ npx create-react-app my-app 
+cd myapp
+
+
+npm install firebase-tools
+
+firbase login
+fibase init
+hosting and (optionally) select spacebar+enter
+
+use existing project and select
+
+build
+
+yes
+
+no
+
+npm run build
+
+firebase deploy
+
+open link in other browser or phone
